@@ -1,2 +1,4 @@
-html/*
-!html/index.php
+
+#!html/src/index.php
+#html/*
+html/.DS_Store

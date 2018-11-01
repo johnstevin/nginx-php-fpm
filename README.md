@@ -1,5 +1,10 @@
 # nginx-php-fpm
 
+## 构建
+```sh
+docker build -t web .
+```
+
 ## 拉去镜像
 ```sh
 docker pull johnstevin/nginx-php-fpm
