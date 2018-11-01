@@ -1,2 +1,2 @@
-src/*
-!src/index.php
+html/*
+!html/index.php
