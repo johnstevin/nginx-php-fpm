@@ -230,7 +230,9 @@ RUN mkdir -p /etc/nginx/sites-available/ && \
     mkdir -p /var/www/html/src/
 ADD conf/nginx-site.conf /etc/nginx/sites-available/default.conf
 ADD conf/nginx-site-ssl.conf /etc/nginx/sites-available/default-ssl.conf
-RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
+ADD conf/nginx-site-admin.conf /etc/nginx/sites-available/admin.conf
+RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf && \
+    ln -s /etc/nginx/sites-available/admin.conf /etc/nginx/sites-enabled/admin.conf
 
 # tweak php-fpm config
 RUN echo "cgi.fix_pathinfo=0" > ${php_vars} &&\
@@ -270,6 +272,6 @@ ADD html/ /var/www/html/
 ADD errors/ /var/www/errors
 
 
-EXPOSE 443 80
+EXPOSE 443 80 81
 
 CMD ["/start.sh"]
