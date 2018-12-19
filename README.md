@@ -15,7 +15,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/cool2rong/nginx-php-fpm:1.0.3
 
 ## 本地项目目录结构
 
-- /html/<project>/
+- /html/\<project\>/
 
 ## 创建容器
 ```sh
