@@ -190,6 +190,7 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     freetype-dev \
     sqlite-dev \
     libjpeg-turbo-dev \
+    g++ \
     ffmpeg && \
     docker-php-ext-configure gd \
       --with-gd \
