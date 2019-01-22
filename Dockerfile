@@ -190,6 +190,7 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     freetype-dev \
     sqlite-dev \
     libjpeg-turbo-dev && \
+    ffmpeg && \
     docker-php-ext-configure gd \
       --with-gd \
       --with-freetype-dir=/usr/include/ \
@@ -202,6 +203,8 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
     # install mongodb ext && \
     pecl install mongodb && \
     docker-php-ext-enable mongodb && \
+    pecl install swoole && \
+    docker-php-ext-enable swoole && \
     docker-php-source delete && \
     mkdir -p /etc/nginx && \
     mkdir -p /var/www/app && \
