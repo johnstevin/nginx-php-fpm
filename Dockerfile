@@ -199,13 +199,15 @@ RUN echo @testing http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repo
       --with-jpeg-dir=/usr/include/ && \
     #curl iconv session
     #docker-php-ext-install pdo_mysql pdo_sqlite mysqli mcrypt gd exif intl xsl json soap dom zip opcache && \
-    docker-php-ext-install iconv pdo_mysql pdo_sqlite mysqli gd exif intl xsl json soap dom zip opcache && \
+    docker-php-ext-install iconv pdo_mysql pdo_sqlite mysqli gd exif intl xsl json soap dom zip opcache pcntl && \
     #pecl install xdebug && \
     # install mongodb ext && \
     pecl install mongodb && \
     docker-php-ext-enable mongodb && \
     pecl install swoole && \
     docker-php-ext-enable swoole && \
+    pecl install redis && \
+    docker-php-ext-enable redis && \
     docker-php-source delete && \
     mkdir -p /etc/nginx && \
     mkdir -p /var/www/app && \
