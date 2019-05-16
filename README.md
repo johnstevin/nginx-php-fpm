@@ -5,7 +5,7 @@
 docker build -t web .
 ```
 
-## 拉去镜像
+## 拉取镜像
 ```sh
 // 国外
 docker pull johnstevin/nginx-php-fpm
