@@ -1,4 +1,5 @@
-FROM php:7.2.4-fpm-alpine
+#FROM php:7.2.4-fpm-alpine
+FROM php:7.4.11-fpm-alpine3.12
 
 LABEL maintainer="Stevin.john <stevin.john@qq.com>"
 
